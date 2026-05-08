@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        /* Reset de estilos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #121212;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #F9FAFB;
+        }
+
+        h1 {
+            color: #FDE68A;
+            margin-bottom: 20px;
+        }
+
+        /* Estilização do Form (Bloco Superior) */
+        form {
+            background: #1E1E1E;
+            padding: 40px;
+            width: 350px;
+            border-radius: 20px 20px 0 0; /* Arredonda só o topo */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            text-align: left;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            border: none;
+            border-radius: 10px;
+            outline: none;
+            background: #2A2A2A;
+            color: #fff;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #FDE68A;
+            color: #121212;
+            border: none;
+            border-radius: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: #FEF3C7;
+        }
+
+        /* Estilização do Link (Bloco Inferior unido ao form) */
+        a {
+            display: block;
+            width: 350px;
+            background: #1E1E1E;
+            text-align: center;
+            padding: 0 40px 30px 40px;
+            color: #FDE68A;
+            text-decoration: none;
+            font-size: 13px;
+            border-radius: 0 0 20px 20px; /* Arredonda só a base */
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Remove o espaço visual dos <br> entre o form e o link */
+        body > br {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Login</h1>
+
+    <form action="/login" method="post">
+        Email: <input type="email" name="email">
+        <br><br>
+        Senha: <input type="password" name="senha">
+        <br><br>
+        <button type="submit">Entrar</button>
+    </form>
+    <br>
+    <a href="/cadastro">Criar conta</a>
+    <a href="/tela_inicial"></a>
+
+</body>
+</html>
