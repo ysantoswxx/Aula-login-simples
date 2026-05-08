@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Administrativo</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #121212;
+            color: #F9FAFB;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .painel {
+            background: #1E1E1E;
+            padding: 40px;
+            border-radius: 20px;
+            width: 350px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        h1 {
+            color: #FDE68A;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 25px;
+            font-size: 18px;
+        }
+
+        span {
+            color: #FDE68A;
+            font-weight: bold;
+        }
+
+        a {
+            display: inline-block;
+            background: #FDE68A;
+            color: #121212;
+            padding: 12px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        a:hover {
+            background: #FEF3C7;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="painel">
+        <h1>Painel Administrativo</h1>
+
+        <p>Bem-vindo, <span>{{ usuario.nome }}</span></p>
+
+        <a href="/">Sair</a>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-vindo | Adega Premium</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        body {
+            background: #121212; /* Fundo escuro padrão */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #F9FAFB;
+            overflow: hidden;
+        }
+
+        /* Efeito de fundo com luz suave */
+        body::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, #1e1e1e 0%, #121212 70%);
+            z-index: -1;
+        }
+
+        .welcome-card {
+            text-align: center;
+            background: #1E1E1E;
+            padding: 50px 40px;
+            border-radius: 30px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+            width: 400px;
+            border: 1px solid #333;
+        }
+
+        .logo-main {
+            font-size: 32px;
+            font-weight: bold;
+            color: #FDE68A;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        p {
+            color: #BDBDBD;
+            margin-bottom: 40px;
+            font-size: 16px;
+        }
+
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        /* Estilo comum dos botões */
+        .btn {
+            padding: 15px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.3s;
+            cursor: pointer;
+            display: block;
+        }
+
+        /* Botão de Login (Destaque) */
+        .btn-login {
+            background: #FDE68A;
+            color: #121212;
+            border: none;
+        }
+
+        .btn-login:hover {
+            background: #FEF3C7;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(253, 230, 138, 0.3);
+        }
+
+        /* Botão de Cadastro (Outline) */
+        .btn-register {
+            background: transparent;
+            color: #FDE68A;
+            border: 2px solid #FDE68A;
+        }
+
+        .btn-register:hover {
+            background: rgba(253, 230, 138, 0.1);
+            transform: translateY(-3px);
+        }
+
+        .footer-text {
+            margin-top: 30px;
+            font-size: 12px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="welcome-card">
+        <div class="logo-main">Adega Premium</div>
+        <p>A melhor experiência em bebidas finas. <br> Escolha como deseja continuar:</p>
+
+        <div class="button-group">
+            <a href="/login" class="btn btn-login">Acessar minha conta</a>
+            
+            <a href="/cadastro" class="btn btn-register">Criar uma conta nova</a>
+        </div>
+
+        <div class="footer-text">
+            &copy; 2026 Adega Premium System
+        </div>
+    </div>
+
+</body>
+</html>

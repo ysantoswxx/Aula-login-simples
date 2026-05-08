@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
+
     <style>
         * {
             margin: 0;
@@ -15,14 +17,13 @@
         body {
             background: #121212;
             display: flex;
-            flex-direction: column; /* Alinha os elementos em coluna */
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
             color: #F9FAFB;
         }
 
-        /* Criamos uma área que engloba o formulário e o link abaixo dele */
         h1 {
             color: #FDE68A;
             margin-bottom: 20px;
@@ -32,14 +33,19 @@
             background: #1E1E1E;
             padding: 40px;
             width: 350px;
-            border-radius: 20px 20px 0 0; /* Arredonda apenas o topo */
+            border-radius: 20px 20px 0 0;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 5px;
         }
 
         input {
             width: 100%;
             padding: 12px;
-            margin-top: 8px;
             border: none;
             border-radius: 10px;
             outline: none;
@@ -57,49 +63,60 @@
             font-weight: bold;
             cursor: pointer;
             transition: 0.3s;
-            margin-top: 10px;
+            margin-top: 20px;
         }
 
         button:hover {
             background: #FEF3C7;
         }
 
-        /* Estilizando o link para parecer que faz parte do bloco cinza */
         a {
             display: block;
-            width: 350px; /* Mesma largura do formulário */
-            background: #1E1E1E; /* Mesma cor do formulário */
+            width: 350px;
+            background: #1E1E1E;
             text-align: center;
-            padding: 0 40px 30px 40px; /* Preenchimento para alinhar com o form */
+            padding: 0 40px 30px 40px;
             color: #FDE68A;
             text-decoration: none;
             font-size: 13px;
-            border-radius: 0 0 20px 20px; /* Arredonda apenas a base */
+            border-radius: 0 0 20px 20px;
         }
 
         a:hover {
             text-decoration: underline;
         }
 
-        /* Esconde os <br> extras para não quebrar o layout */
-        body > br {
-            display: none;
+        .erro {
+            color: red;
+            margin-top: 10px;
         }
     </style>
 </head>
+
 <body>
+
     <h1>Cadastro</h1>
 
     <form action="/cadastro" method="post">
-        Email: <input type="email" name="email">
-        <br><br>
-        Senha: <input type="password" name="senha">
-        <br><br>
+
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+
         <button type="submit">Cadastrar</button>
     </form>
-    <br>
-    <a href="/login">Ja tenho conta</a>
-    <a href="/tela_inical">Ja tenho conta</a>
-    
+
+    {% if erro %}
+    <p class="erro">{{ erro }}</p>
+    {% endif %}
+
+    <a href="/login">Já tenho conta</a>
+
 </body>
+
 </html>
